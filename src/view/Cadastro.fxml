@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="id_cadastro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="8.0" minHeight="0.0" minWidth="0.0" prefHeight="146.0" prefWidth="398.0">
+         <children>
+            <TextField fx:id="id_nome" layoutX="15.0" layoutY="36.0" promptText="Nome" />
+            <TextField layoutX="14.0" layoutY="70.0" promptText="Telefone" />
+            <Label fx:id="id_cliente" layoutX="16.0" layoutY="9.0" text="Cliente" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField layoutX="197.0" layoutY="69.0" promptText="Celular" />
+            <Separator layoutX="9.0" layoutY="140.0" prefHeight="3.0" prefWidth="377.0" />
+            <TextField fx:id="id_email" layoutX="197.0" layoutY="36.0" promptText="Email" />
+            <CheckBox layoutX="16.0" layoutY="106.0" mnemonicParsing="false" text="Whatsapp" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="161.0" prefHeight="504.0" prefWidth="377.0">
+         <children>
+            <RadioButton layoutX="92.0" layoutY="124.0" mnemonicParsing="false" text="Gato">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Especie" />
+               </toggleGroup></RadioButton>
+            <RadioButton layoutX="3.0" layoutY="122.0" mnemonicParsing="false" selected="true" text="Cachorro" toggleGroup="$Especie" />
+            <RadioButton layoutX="91.0" layoutY="150.0" mnemonicParsing="false" text="Fêmia">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Sexo" />
+               </toggleGroup></RadioButton>
+            <RadioButton layoutX="3.0" layoutY="151.0" mnemonicParsing="false" selected="true" text="Macho" toggleGroup="$Sexo" />
+            <TextField disable="true" layoutX="161.0" layoutY="185.0" prefHeight="25.0" prefWidth="191.0" />
+            <TextField disable="true" layoutX="161.0" layoutY="214.0" prefHeight="25.0" prefWidth="191.0" />
+            <CheckBox layoutX="4.0" layoutY="185.0" mnemonicParsing="false" text="Problema de saude" />
+            <CheckBox layoutX="4.0" layoutY="216.0" mnemonicParsing="false" text="Alergia" />
+            <TextArea layoutX="3.0" layoutY="336.0" prefHeight="86.0" prefWidth="350.0" promptText="Observações" />
+            <TextField layoutX="1.0" layoutY="84.0" prefHeight="25.0" prefWidth="171.0" promptText="Raça" />
+            <TextField layoutY="53.0" prefHeight="25.0" prefWidth="171.0" promptText="Porte" />
+            <TextField layoutX="-1.0" layoutY="22.0" prefHeight="25.0" prefWidth="171.0" promptText="Nome do pet" />
+            <Label layoutY="-2.0" text="Pet">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <CheckBox layoutX="4.0" layoutY="279.0" mnemonicParsing="false" text="Castrado" />
+            <CheckBox layoutX="4.0" layoutY="247.0" mnemonicParsing="false" text="Medicamento" />
+            <TextField disable="true" layoutX="161.0" layoutY="245.0" prefHeight="25.0" prefWidth="191.0" />
+            <CheckBox layoutX="4.0" layoutY="309.0" mnemonicParsing="false" selected="true" text="Perfume" />
+            <Button layoutX="147.0" layoutY="440.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="90.0" text="Cadastrar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
