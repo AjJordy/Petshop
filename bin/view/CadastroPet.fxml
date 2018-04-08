@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="pet_border" prefHeight="664.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TelaCadastroPet">
+   <center>
+      <Pane prefHeight="761.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="9.0" prefHeight="653.0" prefWidth="377.0">
+               <children>
+                  <TextField fx:id="txtNomePet" layoutX="-1.0" layoutY="22.0" prefHeight="25.0" prefWidth="171.0" promptText="Nome do pet" />
+                  <TextField fx:id="txtPorte" layoutY="53.0" prefHeight="25.0" prefWidth="171.0" promptText="Porte" />
+                  <TextField fx:id="txtRaca" layoutX="1.0" layoutY="84.0" prefHeight="25.0" prefWidth="171.0" promptText="Raça" />
+                  <TextArea fx:id="txtObservacao" layoutX="4.0" layoutY="435.0" prefHeight="86.0" prefWidth="350.0" promptText="Observações" />
+                  <RadioButton layoutX="92.0" layoutY="124.0" mnemonicParsing="false" text="Gato">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Especie" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="3.0" layoutY="122.0" mnemonicParsing="false" selected="true" text="Cachorro" toggleGroup="$Especie" />
+                  <RadioButton layoutX="91.0" layoutY="150.0" mnemonicParsing="false" text="Fêmia">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Sexo" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="3.0" layoutY="151.0" mnemonicParsing="false" selected="true" text="Macho" toggleGroup="$Sexo" />
+                  <TextField fx:id="txtSaude" disable="true" layoutX="161.0" layoutY="185.0" prefHeight="25.0" prefWidth="200.0" />
+                  <TextField fx:id="txtAlergia" disable="true" layoutX="161.0" layoutY="214.0" prefHeight="25.0" prefWidth="199.0" />
+                  <CheckBox fx:id="problema" layoutX="4.0" layoutY="185.0" mnemonicParsing="false" onAction="#handleProblema" text="Problema de saude" />
+                  <CheckBox fx:id="alergia" layoutX="4.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleAlergia" text="Alergia" />
+                  <Label layoutY="-2.0" text="Pet">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="castrado" layoutX="4.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleCastrado" text="Castrado" />
+                  <CheckBox fx:id="medicamento" layoutX="4.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleMedicamento" text="Medicamento" />
+                  <TextField fx:id="txtMedicamento" disable="true" layoutX="161.0" layoutY="245.0" prefHeight="25.0" prefWidth="200.0" />
+                  <CheckBox fx:id="perfume" layoutX="4.0" layoutY="309.0" mnemonicParsing="false" onAction="#handlePerfume" selected="true" text="Perfume" />
+                  <Button fx:id="btnCadastrarPet" layoutX="147.0" layoutY="580.0" mnemonicParsing="false" onAction="#handleCadastrarPet" prefHeight="41.0" prefWidth="90.0" text="Cadastrar" />
+                  <Label layoutX="125.0" layoutY="499.0" opacity="0.0" text="Cliente ja cadastrado" textFill="#eb0b03" />
+                  <CheckBox fx:id="vermifugado" layoutX="4.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleVermifugado" text="Vermifugado" />
+                  <CheckBox fx:id="v8" layoutX="4.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleV8" text="V8" />
+                  <CheckBox fx:id="antirabica" layoutX="4.0" layoutY="397.0" mnemonicParsing="false" onAction="#handleAntirabica" text="Antirabica" />
+                  <DatePicker fx:id="dateV8" disable="true" layoutX="165.0" layoutY="365.0" />
+                  <DatePicker fx:id="dateAntirabica" disable="true" layoutX="165.0" layoutY="394.0" />
+                  <DatePicker fx:id="dateVermifugado" disable="true" layoutX="165.0" layoutY="336.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

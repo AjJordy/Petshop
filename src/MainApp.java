@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 
 import javafx.application.Application;
@@ -6,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import view.TelaCadastro;
 
 public class MainApp extends Application {
 
@@ -15,7 +17,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Petshop");
+        this.primaryStage.setTitle("Petshop"); 
 
         initRootLayout();
 
@@ -49,6 +51,7 @@ public class MainApp extends Application {
             // Carrega o person overview.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("view/Cadastro.fxml"));
+            loader.setController(new TelaCadastro());
             AnchorPane personOverview = (AnchorPane) loader.load();
 
             // Define o person overview dentro do root layout.
